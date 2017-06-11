@@ -1,0 +1,89 @@
+   html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure,  footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }  body { line-height:1; }  article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section {  display:block; }  nav ul { list-style:none; }  blockquote, q { quotes:none; }  blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; }  a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }   ins { background-color:#ff9; color:#000; text-decoration:none; }  mark { background-color:#ff9; color:#000;  font-style:italic; font-weight:bold; }  del { text-decoration: line-through; }  abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }  table { border-collapse:collapse; border-spacing:0; }  hr { display:block; height:1px; border:0;  border-top:1px solid #cccccc; margin:1em 0; padding:0; }  input, select { vertical-align:middle; }
+sup{line-height: 1;vertical-align: inherit;}
+.main{
+  width:100%;
+  margin:0 auto;
+  padding:0 15px;
+  box-sizing: border-box;
+}
+.areaOpen{
+  display:flex;
+  justify-content:center;
+  align-items: stretch;
+  li{
+    display:block;
+    flex-basis: 15%;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+}
+
+.flet{
+  display:flex;
+  border-bottom:2px solid #666;
+  width:100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content:center;
+  align-items: stretch;
+  .string{
+    flex-basis: 15%;
+    flex-grow: 1;
+    }
+  li{
+    display:block;
+    text-align: center;
+    font-size:12px;
+
+    & ~ li{
+      border-top:1px solid #666;
+      border-right:1px solid #ccc;
+      background: #eee;
+      span{
+        display: block;
+        width:100%;
+        line-height:60px;
+    //    visibility: hidden;
+      }
+    }
+    &:first-child{
+      padding:20px 0;
+      background:#333;
+      color:#fff;
+      font-weight: bold;
+    }
+  }
+
+  .string:first-child{
+    li ~ li{
+      border-left: 1px solid #ccc;
+    }
+
+  //ポジションマーク
+  li{
+    position: relative;
+  &:nth-child(4),
+  &:nth-child(6),
+  &:nth-child(8),
+  &:nth-child(10),
+  &:nth-child(13),
+  &:nth-child(16),
+  &:nth-child(18),
+  &:nth-child(20),
+  &:nth-child(22){
+    &::before{
+      position: absolute;
+      margin-top:-8px;
+      top:50%;
+      left:-1em;
+      font-size:9px;
+      content: "●";
+    }
+  }
+  &:nth-child(13){
+    &::before{content:"●●";}
+  }
+}
+  }
+}
