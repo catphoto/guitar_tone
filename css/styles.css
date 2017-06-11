@@ -1,0 +1,189 @@
+@charset "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+sup {
+  line-height: 1;
+  vertical-align: inherit;
+}
+
+.main {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.areaOpen {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.areaOpen li {
+  display: block;
+  -webkit-flex-basis: 15%;
+  -ms-flex-preferred-size: 15%;
+  flex-basis: 15%;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.flet {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #666;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.flet .string {
+  -webkit-flex-basis: 15%;
+  -ms-flex-preferred-size: 15%;
+  flex-basis: 15%;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.flet li {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+}
+
+.flet li ~ li {
+  border-top: 1px solid #666;
+  border-right: 1px solid #ccc;
+  background: #eee;
+}
+
+.flet li ~ li span {
+  display: block;
+  width: 100%;
+  line-height: 60px;
+}
+
+.flet li:first-child {
+  padding: 20px 0;
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.flet .string:first-child li ~ li {
+  border-left: 1px solid #ccc;
+}
+
+.flet .string:first-child li {
+  position: relative;
+}
+
+.flet .string:first-child li:nth-child(4)::before, .flet .string:first-child li:nth-child(6)::before, .flet .string:first-child li:nth-child(8)::before, .flet .string:first-child li:nth-child(10)::before, .flet .string:first-child li:nth-child(13)::before, .flet .string:first-child li:nth-child(16)::before, .flet .string:first-child li:nth-child(18)::before, .flet .string:first-child li:nth-child(20)::before, .flet .string:first-child li:nth-child(22)::before {
+  position: absolute;
+  margin-top: -8px;
+  top: 50%;
+  left: -1em;
+  font-size: 9px;
+  content: "●";
+}
+
+.flet .string:first-child li:nth-child(13)::before {
+  content: "●●";
+}
